@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title> Joe's Stock Apps </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="public/style/style.css">
+  	<link rel="stylesheet" href="public/style/bootstrap.min.css">
+  	<link rel="stylesheet" href="public/style/bootstrap-datepicker3.min.css">
+</head>
+<body>
+	<div class="container">
+		<div class="col-xs-12 alert-msg">
+		    <div class="responseMsg alert"></div>
+		</div> 
+
+		<div class="jumbotron">
+			<div class="row ">
+				<div class="col-md-6 offset-md-3">
+					<h3>Upload Your CSV file Here</h3>
+					<form id="csvUpload">
+			            <input type="file" id="csv-file" name="csv_file" class="file-box mb-2"/>
+			            <button class="btn btn-primary">UPLOAD</button>
+			        </form>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<h6 id="last_upload" style="text-align: center;"></h6>
+		<div class="jumbotron">
+			<div class="row ">
+				<div class="col-md-12">
+					<h3 style="text-align: center;">Insert Your Data Here</h3>
+					<form id="trackForm">
+			            <div class="form-row">
+						    <div class="col-md mt-2">
+						      <select class="form-control" id="stock_list" name="stock_name">
+						      	<option value="-1">--Selet Company Name--</option>
+						      </select>
+						    </div>
+						    <div class="input-group input-daterange col-md mt-2">
+							    <input type="text" id="start" class="form-control" placeholder="Start Date Range" name="stock_start_date">
+							    <div class="input-group-addon">&nbsp;&nbsp; to &nbsp;&nbsp;</div>
+							    <input type="text" id="end" class="form-control" placeholder="End Date Range" name="stock_end_date">
+							</div>
+						</div>
+			            <button class="btn btn-primary float-right mt-2">SUBMIT</button>
+			        </form>
+				</div>
+			</div>
+			<div class="result" style="display: none;">
+				<div class="row">
+					<div class="col-md-12">
+						<h3 style="text-align: center;">Result</h3>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md">
+						<h6>Profit : </h6><p id="profit"></p>
+					</div>
+
+					<div class="col-md">
+						<h6>Buy Date : </h6><p id="buy_date"></p>
+					</div>
+
+					<div class="col-md">
+						<h6>Sell Date : </h6><p id="sell_date"></p>
+					</div>
+
+					<div class="col-md">
+						<h6>Mean : </h6><p id="mean"></p>
+					</div>
+
+					<div class="col-md">
+						<h6>Deviation : </h6><p id="deviation"></p>
+					</div>
+
+				</div>	
+			</div>
+			
+		</div>
+	</div>
+</body>
+</html>
+<script type="text/javascript" src="public/js/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" href="public/js/boostrap.min.js"></script>
+<script type="text/javascript" src="public/js/bootstrap-datepicker.min.js"></script>
+<script type="text/javascript" src="public/js/bootstrap-datepicker.en-GB.min.js"></script>
+<script type="text/javascript" src="public/js/app.js"></script>
+
+
